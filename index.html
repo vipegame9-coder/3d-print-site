@@ -1060,18 +1060,18 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form fade-in" onsubmit="submitForm(event)">
+                <form class="contact-form fade-in" action="https://formspree.io/f/xoejyjyp" method="POST">
                     <div class="form-group">
                         <label>Ваше имя</label>
-                        <input type="text" placeholder="Как к вам обращаться?" required>
+                        <input type="text" name="name" placeholder="Как к вам обращаться?" required>
                     </div>
                     <div class="form-group">
                         <label>Телефон или email</label>
-                        <input type="text" placeholder="Для обратной связи" required>
+                        <input type="text" name="contact" placeholder="Для обратной связи" required>
                     </div>
                     <div class="form-group">
                         <label>Тип услуги</label>
-                        <select>
+                        <select name="service">
                             <option>3D печать готовой модели</option>
                             <option>Моделирование + печать</option>
                             <option>Фигурки и персонажи</option>
@@ -1082,7 +1082,7 @@
                     </div>
                     <div class="form-group">
                         <label>Описание задачи</label>
-                        <textarea placeholder="Опишите что нужно напечатать, размеры, материал..."></textarea>
+                        <textarea name="message" placeholder="Опишите что нужно напечатать, размеры, материал..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">🚀 Отправить заявку</button>
                 </form>
@@ -1098,7 +1098,7 @@
                     <div class="logo-icon">️</div>
                     3Д Печатники
                 </div>
-                <p>Профессиональная 3D печать и моделирование. Воплощаем идеи в реальность с 2020 года.</p>
+                <p>Профессиональная 3D печать и моделирование. Воплощаем идеи в реальность с 2026 года.</p>
             </div>
             <div class="footer-links">
                 <h4>Навигация</h4>
@@ -1116,7 +1116,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 3Д Печатники. Все права защищены.</p>
+            <p>© 2026 3Д Печатники. Все права защищены.</p>
         </div>
     </footer>
 
@@ -1148,12 +1148,6 @@
             document.getElementById('calcResult').textContent = `Примерная стоимость: ${result} ₽`;
         }
 
-        // Form submit
-        function submitForm(e) {
-            e.preventDefault();
-            alert('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-            e.target.reset();
-        }
 
         // Scroll animations
         const observer = new IntersectionObserver((entries) => {
