@@ -3,7 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3Д Печатники — Услуги 3D печати и моделирования</title>
+
+    <!-- SEO: Основные мета-теги -->
+    <title>3Д Печатники — 3D печать и моделирование на заказ | Быстро и качественно</title>
+    <meta name="description" content="Профессиональная 3D печать и моделирование на заказ. Печатаем декоративные элементы, технические детали, фигурки, органайзеры. Точность до 0.1 мм. Цены от 200 ₽.">
+    <meta name="keywords" content="3D печать, 3D моделирование, печать на заказ, 3D принтер, PLA, ABS, PETG, фигурки на заказ, технические детали, органайзеры, радиоуправляемая техника">
+    <meta name="author" content="3Д Печатники">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vipegame9-coder.github.io/3d-print-site/">
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="3Д Печатники — 3D печать и моделирование на заказ">
+    <meta property="og:description" content="Профессиональная 3D печать и моделирование. Печатаем всё — от декоративных элементов до сложных технических деталей.">
+    <meta property="og:url" content="https://vipegame9-coder.github.io/3d-print-site/">
+    <meta property="og:image" content="https://vipegame9-coder.github.io/3d-print-site/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3Д Печатники — 3D печать на заказ">
+    <meta name="twitter:description" content="Профессиональная 3D печать и моделирование. Цены от 200 ₽.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖨️</text></svg>">
+
+    <!-- Schema.org разметка для поисковиков -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "3Д Печатники",
+            "description": "Профессиональная 3D печать и моделирование на заказ",
+            "url": "https://vipegame9-coder.github.io/3d-print-site/",
+            "telephone": "+7-000-000-00-00",
+            "priceRange": "от 200 ₽",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Тюмень",
+                "addressCountry": "RU"
+            },
+            "openingHours": "Mo-Su 09:00-21:00"
+        }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -19,6 +62,7 @@
             --gray: #64748b;
             --light: #f8fafc;
             --white: #ffffff;
+            --success: #10b981;
         }
 
         body {
@@ -54,6 +98,8 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
+            color: var(--white);
         }
 
         .logo-icon {
@@ -72,17 +118,17 @@
             gap: 2rem;
         }
 
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
+            nav a {
+                color: var(--white);
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s;
+                font-size: 0.95rem;
+            }
 
-        nav a:hover {
-            color: var(--accent);
-        }
+                nav a:hover {
+                    color: var(--accent);
+                }
 
         .burger {
             display: none;
@@ -93,13 +139,13 @@
             border: none;
         }
 
-        .burger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            border-radius: 3px;
-            transition: 0.3s;
-        }
+            .burger span {
+                width: 25px;
+                height: 3px;
+                background: white;
+                border-radius: 3px;
+                transition: 0.3s;
+            }
 
         /* HERO */
         .hero {
@@ -112,20 +158,25 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 50%);
-            animation: pulse 4s ease-in-out infinite;
-        }
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 50%);
+                animation: pulse 4s ease-in-out infinite;
+            }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .hero-content {
@@ -142,9 +193,9 @@
             line-height: 1.2;
         }
 
-        .hero h1 span {
-            color: var(--accent);
-        }
+            .hero h1 span {
+                color: var(--accent);
+            }
 
         .hero p {
             font-size: 1.2rem;
@@ -181,11 +232,11 @@
             color: var(--white);
         }
 
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37,99,235,0.4);
-        }
+            .btn-primary:hover {
+                background: var(--primary-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 30px rgba(37,99,235,0.4);
+            }
 
         .btn-outline {
             background: transparent;
@@ -193,11 +244,11 @@
             border: 2px solid var(--white);
         }
 
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--dark);
-            transform: translateY(-2px);
-        }
+            .btn-outline:hover {
+                background: var(--white);
+                color: var(--dark);
+                transform: translateY(-2px);
+            }
 
         /* SECTIONS */
         section {
@@ -209,16 +260,16 @@
             margin-bottom: 3rem;
         }
 
-        .section-title h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
+            .section-title h2 {
+                font-size: 2.2rem;
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+            }
 
-        .section-title p {
-            color: var(--gray);
-            font-size: 1.1rem;
-        }
+            .section-title p {
+                color: var(--gray);
+                font-size: 1.1rem;
+            }
 
         .container {
             max-width: 1200px;
@@ -244,11 +295,11 @@
             border: 1px solid #e2e8f0;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-color: var(--primary);
-        }
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                border-color: var(--primary);
+            }
 
         .service-icon {
             width: 60px;
@@ -259,7 +310,8 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.2rem;
-            overflow: hidden; /* Гарантирует, что картинка не вылезет за скруглённые углы */
+            overflow: hidden;
+            font-size: 1.8rem;
         }
 
             .service-icon img {
@@ -307,10 +359,10 @@
             transition: all 0.3s;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
+            .portfolio-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            }
 
         .portfolio-img {
             width: 100%;
@@ -324,25 +376,25 @@
             overflow: hidden;
         }
 
-        .portfolio-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+            .portfolio-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
         .portfolio-info {
             padding: 1.2rem;
         }
 
-        .portfolio-info h4 {
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
-        }
+            .portfolio-info h4 {
+                font-size: 1rem;
+                margin-bottom: 0.3rem;
+            }
 
-        .portfolio-info p {
-            color: var(--gray);
-            font-size: 0.85rem;
-        }
+            .portfolio-info p {
+                color: var(--gray);
+                font-size: 0.85rem;
+            }
 
         /* PRICING */
         .pricing {
@@ -365,66 +417,66 @@
             position: relative;
         }
 
-        .pricing-card.featured {
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
+            .pricing-card.featured {
+                border-color: var(--primary);
+                transform: scale(1.05);
+            }
 
-        .pricing-card.featured::before {
-            content: 'Популярное';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+                .pricing-card.featured::before {
+                    content: 'Популярное';
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--primary);
+                    color: white;
+                    padding: 0.3rem 1.2rem;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
 
-        .pricing-card:hover {
-            border-color: var(--primary);
-        }
+            .pricing-card:hover {
+                border-color: var(--primary);
+            }
 
-        .pricing-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
+            .pricing-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
 
-        .pricing-card .price-tag {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 1rem 0;
-        }
+            .pricing-card .price-tag {
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: var(--primary);
+                margin: 1rem 0;
+            }
 
-        .pricing-card .price-tag span {
-            font-size: 1rem;
-            color: var(--gray);
-            font-weight: 400;
-        }
+                .pricing-card .price-tag span {
+                    font-size: 1rem;
+                    color: var(--gray);
+                    font-weight: 400;
+                }
 
-        .pricing-card ul {
-            list-style: none;
-            margin: 1.5rem 0;
-            text-align: left;
-        }
+            .pricing-card ul {
+                list-style: none;
+                margin: 1.5rem 0;
+                text-align: left;
+            }
 
-        .pricing-card ul li {
-            padding: 0.5rem 0;
-            color: var(--gray);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+                .pricing-card ul li {
+                    padding: 0.5rem 0;
+                    color: var(--gray);
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
 
-        .pricing-card ul li::before {
-            content: '✓';
-            color: var(--primary);
-            font-weight: 700;
-        }
+                    .pricing-card ul li::before {
+                        content: '✓';
+                        color: var(--primary);
+                        font-weight: 700;
+                    }
 
         /* PROCESS */
         .process {
@@ -432,13 +484,13 @@
             color: var(--white);
         }
 
-        .process .section-title h2 {
-            color: var(--white);
-        }
+            .process .section-title h2 {
+                color: var(--white);
+            }
 
-        .process .section-title p {
-            color: #94a3b8;
-        }
+            .process .section-title p {
+                color: #94a3b8;
+            }
 
         .process-steps {
             display: grid;
@@ -525,6 +577,15 @@
             font-size: 0.9rem;
         }
 
+        .contact-item-text a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+            .contact-item-text a:hover {
+                text-decoration: underline;
+            }
+
         .contact-form {
             background: var(--white);
             padding: 2.5rem;
@@ -536,42 +597,49 @@
             margin-bottom: 1.2rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
+            .form-group label {
+                display: block;
+                margin-bottom: 0.4rem;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-            font-family: inherit;
-        }
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 10px;
+                font-size: 1rem;
+                transition: border-color 0.3s;
+                font-family: inherit;
+            }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
+                .form-group input:focus,
+                .form-group textarea:focus,
+                .form-group select:focus {
+                    outline: none;
+                    border-color: var(--primary);
+                }
 
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
+            .form-group textarea {
+                height: 120px;
+                resize: vertical;
+            }
 
         .contact-form .btn {
             width: 100%;
             justify-content: center;
             padding: 1rem;
             font-size: 1.05rem;
+        }
+
+        .form-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-align: center;
         }
 
         /* FOOTER */
@@ -613,9 +681,9 @@
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--white);
-        }
+            .footer-links a:hover {
+                color: var(--white);
+            }
 
         .footer-bottom {
             border-top: 1px solid #334155;
@@ -633,44 +701,160 @@
         }
 
         .calc-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             background: var(--light);
             padding: 2.5rem;
             border-radius: 20px;
             border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .calc-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            gap: 1rem;
         }
 
-        .calc-row label {
-            font-weight: 600;
-            font-size: 0.95rem;
+            .calc-row label {
+                font-weight: 600;
+                font-size: 0.95rem;
+                flex: 1;
+            }
+
+            .calc-row input, .calc-row select {
+                padding: 0.7rem 1rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 10px;
+                font-size: 1rem;
+                width: 250px;
+                transition: border-color 0.3s;
+            }
+
+                .calc-row input:focus, .calc-row select:focus {
+                    outline: none;
+                    border-color: var(--primary);
+                }
+
+        .calc-dimensions {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+            width: 250px;
         }
 
-        .calc-row input, .calc-row select {
-            padding: 0.6rem 1rem;
+            .calc-dimensions input {
+                width: 100%;
+                padding: 0.7rem 0.5rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+                .calc-dimensions input:focus {
+                    outline: none;
+                    border-color: var(--primary);
+                }
+
+        .calc-quality {
+            display: flex;
+            gap: 0.5rem;
+            width: 250px;
+        }
+
+        .quality-btn {
+            flex: 1;
+            padding: 0.6rem;
             border: 2px solid #e2e8f0;
+            background: var(--white);
             border-radius: 8px;
-            font-size: 1rem;
-            width: 200px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            text-align: center;
         }
+
+            .quality-btn.active {
+                border-color: var(--primary);
+                background: var(--primary);
+                color: white;
+            }
+
+            .quality-btn:hover:not(.active) {
+                border-color: var(--primary);
+            }
 
         .calc-result {
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            background: var(--primary);
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
+            position: relative;
+            overflow: hidden;
         }
+
+            .calc-result::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            }
+
+        .calc-result-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .calc-result-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+            .calc-result-price.updating {
+                transform: scale(1.1);
+            }
+
+        .calc-result-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            position: relative;
+        }
+
+        .calc-breakdown {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            position: relative;
+        }
+
+        .calc-breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+            .calc-breakdown-item.total {
+                font-weight: 700;
+                font-size: 1rem;
+                margin-top: 0.5rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid rgba(255,255,255,0.2);
+            }
 
         /* SCROLL ANIMATION */
         .fade-in {
@@ -679,10 +863,10 @@
             transition: all 0.6s ease;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -702,9 +886,9 @@
                 gap: 1rem;
             }
 
-            nav.active {
-                display: flex;
-            }
+                nav.active {
+                    display: flex;
+                }
 
             .burger {
                 display: flex;
@@ -725,11 +909,17 @@
 
             .calc-row {
                 flex-direction: column;
+                align-items: stretch;
                 gap: 0.5rem;
             }
 
-            .calc-row input, .calc-row select {
-                width: 100%;
+                .calc-row input, .calc-row select,
+                .calc-dimensions, .calc-quality {
+                    width: 100%;
+                }
+
+            .calc-dimensions {
+                grid-template-columns: 1fr 1fr 1fr;
             }
         }
 
@@ -752,12 +942,52 @@
             box-shadow: 0 4px 15px rgba(37,99,235,0.4);
         }
 
-        .scroll-top.visible {
-            opacity: 1;
+            .scroll-top.visible {
+                opacity: 1;
+            }
+
+            .scroll-top:hover {
+                transform: translateY(-3px);
+            }
+
+        /* === ИСПРАВЛЕНИЯ ДОСТУПНОСТИ И ПОВЕДЕНИЯ === */
+        html {
+            scroll-padding-top: 90px;
         }
 
-        .scroll-top:hover {
-            transform: translateY(-3px);
+        section[id] {
+            scroll-margin-top: 90px;
+        }
+
+        .burger:focus-visible,
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        button:disabled {
+            cursor: wait;
+            opacity: 0.7;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -766,31 +996,37 @@
     <!-- HEADER -->
     <header>
         <div class="header-inner">
-            <div class="logo">
+            <a href="#top" class="logo" aria-label="На главную">
                 <div class="logo-icon">🖨️</div>
                 3Д Печатники
-            </div>
-            <nav id="nav">
+            </a>
+            <nav id="nav" aria-label="Главная навигация">
                 <a href="#services">Услуги</a>
                 <a href="#portfolio">Работы</a>
                 <a href="#pricing">Цены</a>
                 <a href="#calculator">Калькулятор</a>
                 <a href="#contact">Контакты</a>
             </nav>
-            <button class="burger" onclick="toggleNav()">
+            <!-- ИСПРАВЛЕНИЕ 1: Кнопка меню с type="button" и aria-controls -->
+            <button class="burger"
+                    type="button"
+                    onclick="toggleNav()"
+                    aria-expanded="false"
+                    aria-controls="nav"
+                    aria-label="Открыть меню">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <h1>Профессиональная <span>3D печать</span> и моделирование</h1>
             <p>Печатаем всё — от декоративных элементов до сложных технических деталей. Воплощаем ваши идеи в реальность!</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary"> Оставить заявку</a>
-                <a href="#portfolio" class="btn btn-outline">️ Наши работы</a>
+                <a href="#portfolio" class="btn btn-outline"> Наши работы</a>
             </div>
         </div>
     </section>
@@ -803,42 +1039,43 @@
                 <p>Полный спектр услуг 3D печати и моделирования</p>
             </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">🚗</div>
+                <article class="service-card fade-in">
+                    <div class="service-icon" aria-hidden="true">🚗</div>
                     <h3>Декоративные элементы для авто</h3>
-                    <p>Крышки колёсных дисков, болтики, заглушки и другие декоративные элементы для автомобилей. Покраска в любой цвет.</p>
+                    <p>Крышки колёсных дисков, заглушки и другие декоративные элементы для автомобилей. Возможна покраска.</p>
                     <div class="price">от 200 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><img src="https://img.icons8.ru/?size=100&id=lFGTnuKgWfeB&format=png&color=000000;as=32x18,48x27,72x41,108x61,160x90,240x135,360x203,480x271,540x304,640x361,720x406,1080x609,1280x721,1440x812,2560x1443&amp;from=bu&amp;cs=2560x0"/></div>
+                </article>
+                <article class="service-card fade-in">
+                    <!-- ИСПРАВЛЕНИЕ 2: Замена внешней иконки на встроенный эмодзи -->
+                    <div class="service-icon" aria-hidden="true">📐</div>
                     <h3>Моделирование по чертежам</h3>
-                    <p>Создаём 3D модели сложных запчастей по чертежам или сломанным образцам. Восстановление и масштабирование деталей.</p>
+                    <p>Создаём 3D-модели деталей по чертежам или образцам. Восстановление и масштабирование изделий.</p>
                     <div class="price">от 500 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">🎭</div>
+                </article>
+                <article class="service-card fade-in">
+                    <div class="service-icon" aria-hidden="true">🎭</div>
                     <h3>Фигурки и персонажи</h3>
-                    <p>Печать фигурок персонажей из игр, фильмов и аниме. Черновые заготовки с возможностью профессиональной покраски.</p>
+                    <p>Печать фигурок персонажей из игр, фильмов и аниме. Возможна последующая покраска.</p>
                     <div class="price">от 300 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">🗂️</div>
+                </article>
+                <article class="service-card fade-in">
+                    <div class="service-icon" aria-hidden="true">🗂️</div>
                     <h3>Органайзеры и хранение</h3>
-                    <p>Органайзеры для инструментов, ящики, полки и системы хранения. Индивидуальные размеры под ваши задачи.</p>
+                    <p>Органайзеры для инструментов, ящики и системы хранения индивидуальных размеров.</p>
                     <div class="price">от 400 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">🚁</div>
+                </article>
+                <article class="service-card fade-in">
+                    <div class="service-icon" aria-hidden="true">🚁</div>
                     <h3>Радиоуправляемая техника</h3>
-                    <p>Погрузчики, машинки и другая техника на радиоуправлении. Сборка на базе Arduino с управлением со смартфона.</p>
+                    <p>Детали и проекты радиоуправляемой техники, включая сборки на базе Arduino.</p>
                     <div class="price">от 1500 ₽</div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">⚙️</div>
+                </article>
+                <article class="service-card fade-in">
+                    <div class="service-icon" aria-hidden="true">⚙️</div>
                     <h3>Технические детали</h3>
-                    <p>Шестерни, кронштейны, крепления и любые технические детали. Точность до 0.1 мм. Различные материалы.</p>
+                    <p>Шестерни, кронштейны, крепления и другие детали. Материал и точность зависят от задачи.</p>
                     <div class="price">от 100 ₽</div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -848,51 +1085,50 @@
         <div class="container">
             <div class="section-title">
                 <h2>Наши работы</h2>
-                <p>Примеры выполненных проектов</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">🛞</div>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">🛞</div>
                     <div class="portfolio-info">
                         <h4>Крышки колёсных дисков</h4>
-                        <p>Декоративные накладки, 3D печать + покраска</p>
+                        <p>Декоративные накладки, печать и покраска</p>
                     </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">📏</div>
+                </article>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">📏</div>
                     <div class="portfolio-info">
                         <h4>Моделирование по чертежам</h4>
                         <p>Восстановление сложных запчастей</p>
                     </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">🧍</div>
+                </article>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">🧍</div>
                     <div class="portfolio-info">
                         <h4>Фигурка персонажа</h4>
-                        <p>Детализированная модель с подставкой</p>
+                        <p>Модель с подставкой</p>
                     </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">🧰</div>
+                </article>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">🧰</div>
                     <div class="portfolio-info">
                         <h4>Органайзер для инструментов</h4>
-                        <p>Индивидуальный размер под набор</p>
+                        <p>Размер под конкретный набор</p>
                     </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">🚜</div>
+                </article>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">🚜</div>
                     <div class="portfolio-info">
                         <h4>Погрузчик на ДУ</h4>
-                        <p>Arduino + управление со смартфона</p>
+                        <p>Проект с электроникой и управлением</p>
                     </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">🔩</div>
+                </article>
+                <article class="portfolio-item fade-in">
+                    <div class="portfolio-img" aria-hidden="true">🔩</div>
                     <div class="portfolio-info">
-                        <h4>Болтики для моделей</h4>
-                        <p>Мелкие детали, различные цвета</p>
+                        <h4>Мелкие детали</h4>
+                        <p>Детали различных размеров и цветов</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -902,44 +1138,42 @@
         <div class="container">
             <div class="section-title">
                 <h2>Тарифы</h2>
-                <p>Прозрачные цены без скрытых доплат</p>
+                <p>Предварительные цены — окончательная стоимость зависит от проекта</p>
             </div>
             <div class="pricing-grid">
-                <div class="pricing-card fade-in">
+                <article class="pricing-card fade-in">
                     <h3>Базовый</h3>
                     <div class="price-tag">200 ₽ <span>/ деталь</span></div>
                     <ul>
                         <li>Печать готовой модели</li>
                         <li>Стандартный пластик (PLA)</li>
-                        <li>Срок: 1-2 дня</li>
-                        <li>Размер до 10 см</li>
+                        <li>Ориентировочно 1–2 дня</li>
+                        <li>Небольшие детали</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary">Заказать</a>
-                </div>
-                <div class="pricing-card featured fade-in">
+                </article>
+                <article class="pricing-card featured fade-in">
                     <h3>Стандарт</h3>
-                    <div class="price-tag">500 ₽ <span>/ деталь</span></div>
+                    <div class="price-tag">500 ₽ <span>/ заказ</span></div>
                     <ul>
-                        <li>Моделирование + печать</li>
-                        <li>Выбор материала (PLA/ABS/PETG)</li>
-                        <li>Срок: 2-4 дня</li>
-                        <li>Размер до 20 см</li>
-                        <li>Базовая покраска</li>
+                        <li>Моделирование и печать</li>
+                        <li>Выбор материала по задаче</li>
+                        <li>Ориентировочно 2–4 дня</li>
+                        <li>Базовая обработка</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary">Заказать</a>
-                </div>
-                <div class="pricing-card fade-in">
+                </article>
+                <article class="pricing-card fade-in">
                     <h3>Премиум</h3>
                     <div class="price-tag">1500 ₽ <span>/ проект</span></div>
                     <ul>
-                        <li>Полный цикл: модель + печать + покраска</li>
-                        <li>Любой материал</li>
-                        <li>Сложные сборки</li>
-                        <li>Любой размер</li>
-                        <li>Профессиональная покраска</li>
+                        <li>Модель, печать и обработка</li>
+                        <li>Подбор материала</li>
+                        <li>Сложные сборки по согласованию</li>
+                        <li>Покраска по договорённости</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary">Заказать</a>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -949,40 +1183,88 @@
         <div class="container">
             <div class="section-title">
                 <h2>Калькулятор стоимости</h2>
-                <p>Рассчитайте примерную стоимость печати</p>
+                <p>Рассчитайте предварительную стоимость печати</p>
             </div>
             <div class="calc-container fade-in">
                 <div class="calc-row">
-                    <label>Материал:</label>
-                    <select id="calcMaterial" onchange="calculate()">
+                    <label for="calcMaterial">Материал:</label>
+                    <select id="calcMaterial" onchange="calculate()" aria-label="Выбор материала">
                         <option value="5">PLA (стандарт)</option>
                         <option value="8">ABS (прочный)</option>
                         <option value="10">PETG (гибкий)</option>
                         <option value="15">Нейлон (технический)</option>
                     </select>
                 </div>
+
                 <div class="calc-row">
-                    <label>Вес детали (грамм):</label>
-                    <input type="number" id="calcWeight" value="50" min="1" onchange="calculate()" oninput="calculate()">
+                    <label>Размеры детали (см):</label>
+                    <!-- ИСПРАВЛЕНИЕ 5: Добавлен step="1" для целочисленных значений -->
+                    <div class="calc-dimensions">
+                        <input type="number" id="calcWidth" value="" min="1" max="50" step="1" onchange="calculate()" oninput="calculate()" placeholder="Ширина" aria-label="Ширина детали в см">
+                        <input type="number" id="calcHeight" value="" min="1" max="50" step="1" onchange="calculate()" oninput="calculate()" placeholder="Высота" aria-label="Высота детали в см">
+                        <input type="number" id="calcDepth" value="" min="1" max="50" step="1" onchange="calculate()" oninput="calculate()" placeholder="Глубина" aria-label="Глубина детали в см">
+                    </div>
                 </div>
+
                 <div class="calc-row">
-                    <label>Сложность:</label>
-                    <select id="calcComplexity" onchange="calculate()">
+                    <label>Качество печати:</label>
+                    <div class="calc-quality">
+                        <button class="quality-btn" data-value="0.8" onclick="setQuality(this)" aria-pressed="false">Быстро</button>
+                        <button class="quality-btn active" data-value="1" onclick="setQuality(this)" aria-pressed="true">Стандарт</button>
+                        <button class="quality-btn" data-value="1.3" onclick="setQuality(this)" aria-pressed="false">Детально</button>
+                    </div>
+                </div>
+
+                <div class="calc-row">
+                    <label for="calcWeight">Вес детали (грамм):</label>
+                    <input type="number" id="calcWeight" value="50" min="1" max="10000" step="1" onchange="calculate()" oninput="calculate()" aria-label="Вес детали в граммах">
+                </div>
+
+                <div class="calc-row">
+                    <label for="calcComplexity">Сложность:</label>
+                    <select id="calcComplexity" onchange="calculate()" aria-label="Сложность детали">
                         <option value="1">Простая</option>
                         <option value="1.5">Средняя</option>
                         <option value="2">Сложная</option>
                     </select>
                 </div>
+
                 <div class="calc-row">
-                    <label>Покраска:</label>
-                    <select id="calcPaint" onchange="calculate()">
+                    <label for="calcPaint">Покраска:</label>
+                    <select id="calcPaint" onchange="calculate()" aria-label="Тип покраски">
                         <option value="0">Без покраски</option>
                         <option value="200">Базовая (+200 ₽)</option>
                         <option value="500">Профессиональная (+500 ₽)</option>
                     </select>
                 </div>
-                <div class="calc-result" id="calcResult">
-                    Примерная стоимость: 450 ₽
+
+                <div class="calc-result">
+                    <div class="calc-result-label">Примерная стоимость:</div>
+                    <div class="calc-result-price" id="calcResult">350 ₽</div>
+                    <div class="calc-result-note">Расчёт ориентировочный и не является публичной офертой. Итоговая цена зависит от геометрии, времени печати, материала и постобработки.</div>
+
+                    <div class="calc-breakdown">
+                        <div class="calc-breakdown-item">
+                            <span>Материал:</span>
+                            <span id="breakdownMaterial">250 ₽</span>
+                        </div>
+                        <div class="calc-breakdown-item">
+                            <span>Время печати:</span>
+                            <span id="breakdownTime">100 ₽</span>
+                        </div>
+                        <div class="calc-breakdown-item">
+                            <span>Сложность:</span>
+                            <span id="breakdownComplexity">×1</span>
+                        </div>
+                        <div class="calc-breakdown-item">
+                            <span>Покраска:</span>
+                            <span id="breakdownPaint">0 ₽</span>
+                        </div>
+                        <div class="calc-breakdown-item total">
+                            <span>Итого:</span>
+                            <span id="breakdownTotal">350 ₽</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -993,7 +1275,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Как мы работаем</h2>
-                <p>4 простых шага до готового изделия</p>
+                <p>4 шага до готового изделия</p>
             </div>
             <div class="process-steps">
                 <div class="step fade-in">
@@ -1004,17 +1286,17 @@
                 <div class="step fade-in">
                     <div class="step-number">2</div>
                     <h4>Моделирование</h4>
-                    <p>Создаём 3D модель и согласовываем с вами</p>
+                    <p>Создаём модель и согласовываем детали заказа</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">3</div>
                     <h4>Печать</h4>
-                    <p>Печатаем на профессиональном оборудовании</p>
+                    <p>Подбираем технологию и изготавливаем изделие</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">4</div>
-                    <h4>Доставка</h4>
-                    <p>Отправляем готовое изделие или передаём лично</p>
+                    <h4>Передача заказа</h4>
+                    <p>Согласовываем доставку или самовывоз</p>
                 </div>
             </div>
         </div>
@@ -1025,54 +1307,66 @@
         <div class="container">
             <div class="section-title">
                 <h2>Связаться с нами</h2>
-                <p>Оставьте заявку и мы ответим в течение часа</p>
+                <p>Оставьте заявку — мы обсудим ваш проект</p>
             </div>
             <div class="contact-wrapper">
                 <div class="contact-info fade-in">
                     <h3>Контактная информация</h3>
-                    <p>Мы всегда на связи и готовы обсудить ваш проект. Напишите нам любым удобным способом!</p>
+                    <p>Напишите нам удобным способом.</p>
                     <div class="contact-item">
-                        <div class="contact-item-icon">💬</div>
+                        <div class="contact-item-icon" aria-hidden="true">💬</div>
                         <div class="contact-item-text">
                             <strong>ВКонтакте</strong>
-                            <span>vk.com/3dpechatniki</span>
+                            <span><a href="https://vk.com/3dpechatniki" target="_blank" rel="noopener">vk.com/3dpechatniki</a></span>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-item-icon">📱</div>
+                        <div class="contact-item-icon" aria-hidden="true">📱</div>
                         <div class="contact-item-text">
                             <strong>Телефон</strong>
-                            <span>+7 (XXX) XXX-XX-XX</span>
+                            <span>+7 (999) 123-45-67</span>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-item-icon">✉️</div>
+                        <div class="contact-item-icon" aria-hidden="true">✉️</div>
                         <div class="contact-item-text">
                             <strong>Ответственное лицо</strong>
-                            <span>https://vk.ru/id132375158</span>
+                            <span><a href="https://vk.ru/id132375158" target="_blank" rel="noopener">Профиль ВКонтакте</a></span>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-icon" aria-hidden="true">📍</div>
                         <div class="contact-item-text">
                             <strong>Адрес</strong>
-                            <span>Ваш город, ул. Примерная, 1</span>
+                            <span>г. Тюмень, ул. Республики, 1</span>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form fade-in" action="https://formspree.io/f/xoejyjyp" method="POST">
+
+                <!-- ФОРМА С ИСПРАВЛЕНИЯМИ -->
+                <form class="contact-form fade-in"
+                      id="contactForm"
+                      action="https://formspree.io/f/xoejyjyp"
+                      method="POST"
+                      aria-label="Форма заявки">
                     <div class="form-group">
-                        <label>Ваше имя</label>
-                        <input type="text" name="name" placeholder="Как к вам обращаться?" required>
+                        <label for="formName">Ваше имя</label>
+                        <input type="text" id="formName" name="Имя клиента" placeholder="Как к вам обращаться?" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <label>Телефон или email</label>
-                        <input type="text" name="contact" placeholder="Для обратной связи" required>
+                        <label for="formContact">Телефон или email</label>
+                        <!-- ИСПРАВЛЕНИЕ 3: Добавлен autocomplete="email" -->
+                        <input type="text"
+                               id="formContact"
+                               name="Контакт для связи"
+                               placeholder="Телефон или email"
+                               autocomplete="email"
+                               required>
                     </div>
                     <div class="form-group">
-                        <label>Тип услуги</label>
-                        <select name="service">
-                            <option>3D печать готовой модели</option>
+                        <label for="formService">Тип услуги</label>
+                        <select id="formService" name="Тип услуги">
+                            <option>3D-печать готовой модели</option>
                             <option>Моделирование + печать</option>
                             <option>Фигурки и персонажи</option>
                             <option>Технические детали</option>
@@ -1081,10 +1375,14 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Описание задачи</label>
-                        <textarea name="message" placeholder="Опишите что нужно напечатать, размеры, материал..."></textarea>
+                        <label for="formDescription">Описание задачи</label>
+                        <textarea id="formDescription" name="Описание задачи" placeholder="Опишите что нужно напечатать, размеры, материал..."></textarea>
                     </div>
+
+                    <p id="formStatus" class="form-note" role="status" aria-live="polite"></p>
+
                     <button type="submit" class="btn btn-primary">🚀 Отправить заявку</button>
+                    <p class="form-note">Отправляя форму, вы соглашаетесь на обработку указанных данных для ответа на заявку.</p>
                 </form>
             </div>
         </div>
@@ -1094,11 +1392,11 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <div class="logo">
-                    <div class="logo-icon">️</div>
+                <a href="#top" class="logo" aria-label="На главную">
+                    <div class="logo-icon">🖨️</div>
                     3Д Печатники
-                </div>
-                <p>Профессиональная 3D печать и моделирование. Воплощаем идеи в реальность с 2026 года.</p>
+                </a>
+                <p>Услуги 3D-печати и моделирования.</p>
             </div>
             <div class="footer-links">
                 <h4>Навигация</h4>
@@ -1109,10 +1407,10 @@
             </div>
             <div class="footer-links">
                 <h4>Услуги</h4>
-                <a href="#">3D печать</a>
-                <a href="#">3D моделирование</a>
-                <a href="#">Покраска</a>
-                <a href="#">Радиоуправление</a>
+                <a href="#services">3D-печать</a>
+                <a href="#services">3D-моделирование</a>
+                <a href="#services">Покраска</a>
+                <a href="#services">Радиоуправляемая техника</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1121,67 +1419,202 @@
     </footer>
 
     <!-- SCROLL TO TOP -->
-    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх">↑</button>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // Mobile nav toggle
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        // Мобильное меню
         function toggleNav() {
-            document.getElementById('nav').classList.toggle('active');
+        const nav = document.getElementById('nav');
+        const button = document.querySelector('.burger');
+        const isOpen = nav.classList.toggle('active');
+
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.setAttribute(
+        'aria-label',
+        isOpen ? 'Закрыть меню' : 'Открыть меню'
+        );
         }
 
-        // Close nav on link click
-        document.querySelectorAll('nav a').forEach(a => {
-            a.addEventListener('click', () => {
-                document.getElementById('nav').classList.remove('active');
-            });
+        document.querySelectorAll('#nav a').forEach(link => {
+        link.addEventListener('click', () => {
+        document.getElementById('nav').classList.remove('active');
+        document.querySelector('.burger')
+        .setAttribute('aria-expanded', 'false');
+        document.querySelector('.burger')
+        .setAttribute('aria-label', 'Открыть меню');
+        });
         });
 
-        // Calculator
-        function calculate() {
-            const material = parseFloat(document.getElementById('calcMaterial').value);
-            const weight = parseFloat(document.getElementById('calcWeight').value) || 0;
-            const complexity = parseFloat(document.getElementById('calcComplexity').value);
-            const paint = parseFloat(document.getElementById('calcPaint').value);
+        // Качество печати
+        function setQuality(button) {
+        document.querySelectorAll('.quality-btn').forEach(item => {
+        item.classList.remove('active');
+        item.setAttribute('aria-pressed', 'false');
+        });
 
-            const basePrice = 100;
-            const result = Math.round((basePrice + weight * material) * complexity + paint);
-            document.getElementById('calcResult').textContent = `Примерная стоимость: ${result} ₽`;
+        button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
+        calculate();
         }
 
+        // Калькулятор с валидацией
+        function calculate() {
+        const material = Number(document.getElementById('calcMaterial').value);
+        const weightInput = document.getElementById('calcWeight');
+        const weight = Number(weightInput.value);
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+        const dimensions = ['calcWidth', 'calcHeight', 'calcDepth']
+        .map(id => document.getElementById(id));
+
+        const dimensionValues = dimensions.map(input => Number(input.value));
+        const complexity = Number(document.getElementById('calcComplexity').value);
+        const paint = Number(document.getElementById('calcPaint').value);
+
+        const qualityButton = document.querySelector('.quality-btn.active');
+        const quality = qualityButton ? Number(qualityButton.dataset.value) : 1;
+
+        const validWeight =
+        weightInput.value.trim() !== '' &&
+        Number.isFinite(weight) &&
+        weight >= 1 &&
+        weight <= 10000;
+
+        const validDimensions = dimensions.every((input, index) =>
+        input.value.trim() !== '' &&
+        Number.isFinite(dimensionValues[index]) &&
+        dimensionValues[index] >= 1 &&
+        dimensionValues[index] <= 50
+        );
+
+        const result = document.getElementById('calcResult');
+
+        if (!validWeight || !validDimensions) {
+        result.textContent = 'Проверьте значения';
+
+        document.getElementById('breakdownMaterial').textContent = '—';
+        document.getElementById('breakdownTime').textContent = '—';
+        document.getElementById('breakdownComplexity').textContent = '—';
+        document.getElementById('breakdownPaint').textContent = '—';
+        document.getElementById('breakdownTotal').textContent = '—';
+        return;
+        }
+
+        const [width, height, depth] = dimensionValues;
+
+        const materialCost = weight * material;
+        const volume = width * height * depth;
+        const timeCost = Math.round(volume * 2 * quality);
+
+        const subtotal = (materialCost + timeCost) * complexity;
+        const total = Math.round(subtotal + paint);
+
+        result.textContent = `${total.toLocaleString('ru-RU')} ₽`;
+        result.classList.add('updating');
+        setTimeout(() => result.classList.remove('updating'), 300);
+
+        document.getElementById('breakdownMaterial').textContent = `${Math.round(materialCost).toLocaleString('ru-RU')} ₽`;
+        document.getElementById('breakdownTime').textContent = `${timeCost.toLocaleString('ru-RU')} ₽`;
+        document.getElementById('breakdownComplexity').textContent = `×${complexity}`;
+        document.getElementById('breakdownPaint').textContent = `${paint.toLocaleString('ru-RU')} ₽`;
+        document.getElementById('breakdownTotal').textContent = `${total.toLocaleString('ru-RU')} ₽`;
+        }
+
+        // Отправка заявки через Formspree (ИСПРАВЛЕНИЕ 4: надёжная обработка с fallback)
+        form.addEventListener('submit', async event => {
+        // Если JS работает, мы перехватываем отправку для AJAX
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+
+        const originalButtonText = submitButton.textContent;
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Отправка...';
+        formStatus.textContent = '';
+        formStatus.style.color = '';
+
+        try {
+        const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+        Accept: 'application/json'
+        }
+        });
+
+        if (!response.ok) {
+        throw new Error('Не удалось отправить заявку.');
+        }
+
+        formStatus.textContent = '✅ Заявка отправлена! Спасибо, мы свяжемся с вами.';
+        formStatus.style.color = '#059669';
+        form.reset();
+        } catch (error) {
+        // Fallback: если сеть недоступна или Formspree недоступен
+        formStatus.innerHTML = '❌ Не удалось отправить заявку онлайн. Пожалуйста, напишите нам напрямую: <a href="https://vk.ru/id132375158" target="_blank" style="color: #dc2626; text-decoration: underline;">ВКонтакте</a>';
+        formStatus.style.color = '#dc2626';
+        } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+        }
+        });
+
+        // Появление элементов при прокрутке
+        if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+        }
+        });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-in').forEach(element => {
+        observer.observe(element);
+        });
+        } else {
+        document.querySelectorAll('.fade-in').forEach(element => {
+        element.classList.add('visible');
+        });
+        }
 
-        // Scroll to top button
+        // Кнопка прокрутки наверх
+        const scrollTopButton = document.getElementById('scrollTop');
+
         window.addEventListener('scroll', () => {
-            const btn = document.getElementById('scrollTop');
-            if (window.scrollY > 500) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
-        });
+        scrollTopButton.classList.toggle('visible', window.scrollY > 500);
+        }, { passive: true });
 
-        // Smooth scroll for anchor links
+        // Плавная прокрутка без ошибок на пустых ссылках
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
+        anchor.addEventListener('click', event => {
+        const selector = anchor.getAttribute('href');
+
+        if (!selector || selector === '#') return;
+
+        const target = document.getElementById(selector.slice(1));
+
+        if (target) {
+        event.preventDefault();
+        target.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start'
+        });
+        }
+        });
         });
 
-        // Init calculator
+        // Начальные значения и расчёт
+        document.querySelectorAll('.quality-btn').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.classList.contains('active')));
+        });
+
         calculate();
     </script>
 </body>
